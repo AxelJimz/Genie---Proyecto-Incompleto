@@ -1,0 +1,43 @@
+.choose__header {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.choose__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+
+  @media screen and (min-width: map-get($breakpoints, "md")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.choose__card {
+  position: relative;
+  display: flex;
+
+  > div:nth-child(1) {
+    margin-right: 1.25rem;
+
+    > img {
+      width: 150px;
+      transform: translateY(-35%);
+      -webkit-transform: translateY(-35%);
+      -moz-transform: translateY(-35%);
+      -ms-transform: translateY(-35%);
+      -o-transform: translateY(-35%);
+}
+  }
+}
+
+@include Span("choose__span");
+@include Heading("choose__title");
+
+@include CardHeading("choose__card-title");
+@include CardParagraph("choose__card-paragraph");
+

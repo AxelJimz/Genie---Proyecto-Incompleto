@@ -1,0 +1,191 @@
+.services__content {
+  padding: 4rem 1rem 2rem 1rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+}
+
+.services * {
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+}
+
+.services__header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+@include Span("services__span");
+@include Heading("services__title");
+
+.services__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  transition: 0.2s ease-out;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.services__card {
+  padding: 1.5rem;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 5px 7px 15px 2px #525a651f;
+  cursor: pointer;
+  border-radius: 0.313rem;
+  -webkit-border-radius: 0.313rem;
+  -moz-border-radius: 0.313rem;
+  -ms-border-radius: 0.313rem;
+  -o-border-radius: 0.313rem;
+
+  > div:nth-child(1) {
+    transform: translate(-50%) scale(1.3);
+    -webkit-transform: translate(-50%) scale(1.3);
+    -moz-transform: translate(-50%) scale(1.3);
+    -ms-transform: translate(-50%) scale(1.3);
+    -o-transform: translate(-50%) scale(1.3);
+  }
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > div:nth-last-child(1) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &:active {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    box-shadow: 0px 7px 15px 2px #525a6538;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.02);
+      -webkit-transform: scale(1.02);
+      -moz-transform: scale(1.02);
+      -ms-transform: scale(1.02);
+      -o-transform: scale(1.02);
+      box-shadow: 0px 7px 15px 2px #525a6538;
+    }
+  }
+}
+
+@include CardHeading(
+  "services__card-title",
+  map-get($font-sizes, "lg"),
+  map-get($palette, "purple")
+);
+@include CardParagraph("services__card-paragraph");
+
+.services__content {
+  .services__cards:nth-last-child(1) {
+    margin-top: 6rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+
+    @media screen and (min-width: map-get($breakpoints, "sm")) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "lg")) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services__card {
+      padding: 1.75rem;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 0px 2px 25px 0px #5555551a;
+
+      > div:nth-child(1) {
+        position: relative;
+        width: 67.5px;
+        height: 67.5px;
+        margin: 0 auto 1rem auto;
+        transform: translate(0%) scale(1);
+        -webkit-transform: translate(0%) scale(1);
+        -moz-transform: translate(0%) scale(1);
+        -ms-transform: translate(0%) scale(1);
+        -o-transform: translate(0%) scale(1);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        overflow: hidden;
+
+        > img {
+          width: 67.5px;
+        }
+
+        > img:nth-last-child(1) {
+          position: absolute;
+          top: 0;
+          left: 100%;
+        }
+      }
+
+      @include CardHeading("services__card-title", map-get($font-sizes, "lg"));
+
+      &:active {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+
+        > div:nth-child(1) {
+          > img:nth-last-child(1) {
+            left: 0;
+          }
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -o-transform: scale(1);
+
+          > div:nth-child(1) {
+            > img:nth-last-child(1) {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.services__btns {
+    padding: 0;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+@include Button("services__btn", 1.25rem)
+

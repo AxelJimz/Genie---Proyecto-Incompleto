@@ -1,0 +1,35 @@
+.stats {
+    background-color: rgba(map-get($palette, "gray"), 0.1);
+}
+
+.stats__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.25rem;
+
+  @media screen and (min-width: map-get($breakpoints, "md")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "lg")) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stats__card {
+    text-align: center
+}
+
+@include CardHeading("stats__card-title");
+@include CardHeading("stats__card-paragraph");
+
+.stats__card-title {
+    font-family: $source-sans-pro;
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.stats__card-paragraph {
+    font-family: $mukta;
+    font-size: map-get($font-sizes, "lg");
+}

@@ -1,0 +1,67 @@
+* {
+    cursor: none;
+  }
+  
+  .cursor {
+    position: fixed;
+    width: 1.563rem;
+    height: 1.563rem;
+    border-radius: 100%;
+    border: 0.063rem solid #5764EC;
+    transition: all 200ms ease-out;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    -webkit-transform: translate(calc(-50% + 15px), -50%);
+    -moz-transform: translate(calc(-50% + 15px), -50%);
+    -ms-transform: translate(calc(-50% + 15px), -50%);
+    -o-transform: translate(calc(-50% + 15px), -50%);
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    z-index: 2000;
+  }
+  
+  .cursor2 {
+    position: fixed;
+    width: 0.313rem;
+    height: 0.313rem;
+    background-color: #5764EC;
+    pointer-events: none;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    transition: width 0.1s, height 0.1s, opacity 0.1s;
+    -webkit-transition: width 0.1s, height 0.1s, opacity 0.1s;
+    -moz-transition: width 0.1s, height 0.1s, opacity 0.1s;
+    -ms-transition: width 0.1s, height 0.1s, opacity 0.1s;
+    -o-transition: width 0.1s, height 0.1s, opacity 0.1s;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 2000;
+  }
+  
+  .hover {
+    width: 4.375rem;
+    height: 4.375rem;
+    background-color: #5764EC;
+    opacity: 0.2;
+  }
+  
+  .cursorinnerhover {
+    width: 1.563rem;
+    height: 1.563rem;
+    opacity: 0.2;
+  }
+  

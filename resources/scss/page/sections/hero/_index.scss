@@ -1,0 +1,24 @@
+.hero {
+  padding: 8rem 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    padding: 8rem 2rem;
+  }
+}
+
+.hero__content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+
+  @media screen and (min-width: map-get($breakpoints, "md")) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include Heading("hero__title");
+@include Paragraph("hero__paragraph");
+@include Button("hero__btn", 1.25rem);

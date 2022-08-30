@@ -1,0 +1,55 @@
+@mixin Span($class: "span", $size: "md") {
+  .#{$class} {
+    margin-bottom: 0.625rem;
+    font-family: $mukta;
+    font-size: map-get($font-sizes, #{$size});
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: map-get($palette, "red");
+  }
+}
+
+@mixin Heading($class: "heading", $size: "xxl") {
+  .#{$class} {
+    margin-bottom: 1.25rem;
+    font-family: $mukta;
+    font-size: map-get($font-sizes, #{$size});
+    font-weight: 800;
+    line-height: 1.3;
+    color: map-get($palette, "black");
+  }
+}
+
+@mixin Paragraph($class: "heading", $size: "md") {
+  .#{$class} {
+    margin-bottom: 1.25rem;
+    font-family: $source-sans-pro;
+    font-size: map-get($font-sizes, #{$size});
+    font-weight: 400;
+    line-height: 1.8;
+    color: map-get($palette, "gray");
+  }
+}
+
+@mixin CardHeading($class: "heading", $size: "lg", $color : map-get($palette, "black")) {
+  .#{$class} {
+    margin-bottom: 0.625rem;
+    font-family: $mukta;
+    font-size: $size;
+    font-weight: 700;
+    line-height: 1.3;
+    color: $color;
+  }
+}
+
+@mixin CardParagraph($class: "heading", $margin-bottom : 0, $size: "md") {
+  .#{$class} {
+    margin-bottom: $margin-bottom;
+    font-family: $source-sans-pro;
+    font-size: map-get($font-sizes, #{$size});
+    font-weight: 400;
+    line-height: 1.8;
+    color: map-get($palette, "gray");
+  }
+}
